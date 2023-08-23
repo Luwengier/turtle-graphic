@@ -3,6 +3,7 @@ from random import randint
 
 
 timmy_the_turtle = Turtle()
+timmy_the_turtle.speed(10)
 timmy_the_turtle.shape("turtle")
 timmy_the_turtle.color("darkSeaGreen3")
 
@@ -34,18 +35,29 @@ screen.colormode(255)
 
 # TODO: Draw a random walk
 
-timmy_the_turtle.speed(9)
-timmy_the_turtle.pensize(15)
+# timmy_the_turtle.pensize(15)
 
 
-def random_walk():
-    timmy_the_turtle.pencolor(randint(0, 255), randint(0, 255), randint(0, 255))
-    timmy_the_turtle.setheading(90 * randint(0, 3))
-    timmy_the_turtle.forward(30)
+# def random_walk():
+#     timmy_the_turtle.pencolor(randint(0, 255), randint(0, 255), randint(0, 255))
+#     timmy_the_turtle.setheading(90 * randint(0, 3))
+#     timmy_the_turtle.forward(30)
 
 
-for _ in range(72):
-    random_walk()
+# for _ in range(72):
+#     random_walk()
+
+# TODO: Draw a spirograph
+
+
+def draw_spirograph(num: int):
+    for _ in range(num):
+        timmy_the_turtle.pencolor(randint(0, 255), randint(0, 255), randint(0, 255))
+        timmy_the_turtle.circle(50)
+        timmy_the_turtle.left(360 / num)
+
+
+draw_spirograph(18)
 
 
 screen.exitonclick()
