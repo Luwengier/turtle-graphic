@@ -7,6 +7,7 @@ colors = colorgram.extract("hirst-spot.jpg", 20)
 colorLen = len(colors)
 
 timmy_the_turtle = Turtle()
+timmy_the_turtle.hideturtle()
 timmy_the_turtle.speed("fastest")
 timmy_the_turtle.shape("turtle")
 timmy_the_turtle.pu()
